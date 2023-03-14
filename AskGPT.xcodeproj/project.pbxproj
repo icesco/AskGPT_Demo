@@ -11,6 +11,8 @@
 		44DFCA6129C0BBB200B026E7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DFCA6029C0BBB200B026E7 /* ContentView.swift */; };
 		44DFCA6329C0BBB300B026E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44DFCA6229C0BBB300B026E7 /* Assets.xcassets */; };
 		44DFCA6729C0BBB300B026E7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44DFCA6629C0BBB300B026E7 /* Preview Assets.xcassets */; };
+		44DFCA7229C0BC4A00B026E7 /* OpenAISwift in Frameworks */ = {isa = PBXBuildFile; productRef = 44DFCA7129C0BC4A00B026E7 /* OpenAISwift */; };
+		44DFCA7529C0BCA400B026E7 /* ChatBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DFCA7429C0BCA400B026E7 /* ChatBubble.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,7 @@
 		44DFCA6229C0BBB300B026E7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		44DFCA6429C0BBB300B026E7 /* AskGPT.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AskGPT.entitlements; sourceTree = "<group>"; };
 		44DFCA6629C0BBB300B026E7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		44DFCA7429C0BCA400B026E7 /* ChatBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBubble.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +30,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44DFCA7229C0BC4A00B026E7 /* OpenAISwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,6 +58,7 @@
 			children = (
 				44DFCA5E29C0BBB200B026E7 /* AskGPTApp.swift */,
 				44DFCA6029C0BBB200B026E7 /* ContentView.swift */,
+				44DFCA7329C0BC9600B026E7 /* Chat */,
 				44DFCA6229C0BBB300B026E7 /* Assets.xcassets */,
 				44DFCA6429C0BBB300B026E7 /* AskGPT.entitlements */,
 				44DFCA6529C0BBB300B026E7 /* Preview Content */,
@@ -67,6 +72,14 @@
 				44DFCA6629C0BBB300B026E7 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		44DFCA7329C0BC9600B026E7 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				44DFCA7429C0BCA400B026E7 /* ChatBubble.swift */,
+			);
+			path = Chat;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -85,6 +98,9 @@
 			dependencies = (
 			);
 			name = AskGPT;
+			packageProductDependencies = (
+				44DFCA7129C0BC4A00B026E7 /* OpenAISwift */,
+			);
 			productName = AskGPT;
 			productReference = 44DFCA5B29C0BBB200B026E7 /* AskGPT.app */;
 			productType = "com.apple.product-type.application";
@@ -113,6 +129,9 @@
 				Base,
 			);
 			mainGroup = 44DFCA5229C0BBB200B026E7;
+			packageReferences = (
+				44DFCA7029C0BC4A00B026E7 /* XCRemoteSwiftPackageReference "OpenAISwift" */,
+			);
 			productRefGroup = 44DFCA5C29C0BBB200B026E7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -140,6 +159,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				44DFCA6129C0BBB200B026E7 /* ContentView.swift in Sources */,
+				44DFCA7529C0BCA400B026E7 /* ChatBubble.swift in Sources */,
 				44DFCA5F29C0BBB200B026E7 /* AskGPTApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -354,6 +374,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		44DFCA7029C0BC4A00B026E7 /* XCRemoteSwiftPackageReference "OpenAISwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/adamrushy/OpenAISwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		44DFCA7129C0BC4A00B026E7 /* OpenAISwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 44DFCA7029C0BC4A00B026E7 /* XCRemoteSwiftPackageReference "OpenAISwift" */;
+			productName = OpenAISwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 44DFCA5329C0BBB200B026E7 /* Project object */;
 }
