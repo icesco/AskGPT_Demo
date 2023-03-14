@@ -7,15 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		447DB3F029C11734003E44B2 /* ChatbubbleShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447DB3EF29C11734003E44B2 /* ChatbubbleShape.swift */; };
+		447DB3F929C11E6A003E44B2 /* MarkdownUI in Frameworks */ = {isa = PBXBuildFile; productRef = 447DB3F829C11E6A003E44B2 /* MarkdownUI */; };
+		447DB3FB29C12541003E44B2 /* CodeThemeas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447DB3FA29C12541003E44B2 /* CodeThemeas.swift */; };
+		447DB3FD29C12558003E44B2 /* Codehighloghter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447DB3FC29C12558003E44B2 /* Codehighloghter.swift */; };
+		447DB40029C129FE003E44B2 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447DB3FF29C129FE003E44B2 /* Message.swift */; };
+		447DB40329C12A54003E44B2 /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 447DB40229C12A54003E44B2 /* KeychainSwift */; };
+		447DB40529C12A7F003E44B2 /* TokenStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447DB40429C12A7F003E44B2 /* TokenStore.swift */; };
 		44DFCA5F29C0BBB200B026E7 /* AskGPTApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DFCA5E29C0BBB200B026E7 /* AskGPTApp.swift */; };
 		44DFCA6129C0BBB200B026E7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DFCA6029C0BBB200B026E7 /* ContentView.swift */; };
 		44DFCA6329C0BBB300B026E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44DFCA6229C0BBB300B026E7 /* Assets.xcassets */; };
 		44DFCA6729C0BBB300B026E7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44DFCA6629C0BBB300B026E7 /* Preview Assets.xcassets */; };
 		44DFCA7229C0BC4A00B026E7 /* OpenAISwift in Frameworks */ = {isa = PBXBuildFile; productRef = 44DFCA7129C0BC4A00B026E7 /* OpenAISwift */; };
 		44DFCA7529C0BCA400B026E7 /* ChatBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DFCA7429C0BCA400B026E7 /* ChatBubble.swift */; };
+		44DFCA7729C0C06600B026E7 /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DFCA7629C0C06600B026E7 /* ChatViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		447DB3EF29C11734003E44B2 /* ChatbubbleShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatbubbleShape.swift; sourceTree = "<group>"; };
+		447DB3FA29C12541003E44B2 /* CodeThemeas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeThemeas.swift; sourceTree = "<group>"; };
+		447DB3FC29C12558003E44B2 /* Codehighloghter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Codehighloghter.swift; sourceTree = "<group>"; };
+		447DB3FF29C129FE003E44B2 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		447DB40429C12A7F003E44B2 /* TokenStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenStore.swift; sourceTree = "<group>"; };
 		44DFCA5B29C0BBB200B026E7 /* AskGPT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AskGPT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44DFCA5E29C0BBB200B026E7 /* AskGPTApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AskGPTApp.swift; sourceTree = "<group>"; };
 		44DFCA6029C0BBB200B026E7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -23,6 +36,7 @@
 		44DFCA6429C0BBB300B026E7 /* AskGPT.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AskGPT.entitlements; sourceTree = "<group>"; };
 		44DFCA6629C0BBB300B026E7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		44DFCA7429C0BCA400B026E7 /* ChatBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBubble.swift; sourceTree = "<group>"; };
+		44DFCA7629C0C06600B026E7 /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -30,18 +44,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				447DB40329C12A54003E44B2 /* KeychainSwift in Frameworks */,
 				44DFCA7229C0BC4A00B026E7 /* OpenAISwift in Frameworks */,
+				447DB3F929C11E6A003E44B2 /* MarkdownUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		447DB3F129C1187F003E44B2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		447DB3FE29C129F1003E44B2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				447DB3FF29C129FE003E44B2 /* Message.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		44DFCA5229C0BBB200B026E7 = {
 			isa = PBXGroup;
 			children = (
 				44DFCA5D29C0BBB200B026E7 /* AskGPT */,
 				44DFCA5C29C0BBB200B026E7 /* Products */,
+				447DB3F129C1187F003E44B2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,6 +90,9 @@
 			children = (
 				44DFCA5E29C0BBB200B026E7 /* AskGPTApp.swift */,
 				44DFCA6029C0BBB200B026E7 /* ContentView.swift */,
+				447DB3FE29C129F1003E44B2 /* Model */,
+				44DFCA7629C0C06600B026E7 /* ChatViewModel.swift */,
+				447DB40429C12A7F003E44B2 /* TokenStore.swift */,
 				44DFCA7329C0BC9600B026E7 /* Chat */,
 				44DFCA6229C0BBB300B026E7 /* Assets.xcassets */,
 				44DFCA6429C0BBB300B026E7 /* AskGPT.entitlements */,
@@ -78,6 +113,9 @@
 			isa = PBXGroup;
 			children = (
 				44DFCA7429C0BCA400B026E7 /* ChatBubble.swift */,
+				447DB3FA29C12541003E44B2 /* CodeThemeas.swift */,
+				447DB3EF29C11734003E44B2 /* ChatbubbleShape.swift */,
+				447DB3FC29C12558003E44B2 /* Codehighloghter.swift */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
@@ -100,6 +138,8 @@
 			name = AskGPT;
 			packageProductDependencies = (
 				44DFCA7129C0BC4A00B026E7 /* OpenAISwift */,
+				447DB3F829C11E6A003E44B2 /* MarkdownUI */,
+				447DB40229C12A54003E44B2 /* KeychainSwift */,
 			);
 			productName = AskGPT;
 			productReference = 44DFCA5B29C0BBB200B026E7 /* AskGPT.app */;
@@ -131,6 +171,8 @@
 			mainGroup = 44DFCA5229C0BBB200B026E7;
 			packageReferences = (
 				44DFCA7029C0BC4A00B026E7 /* XCRemoteSwiftPackageReference "OpenAISwift" */,
+				447DB3F729C11E6A003E44B2 /* XCRemoteSwiftPackageReference "swift-markdown-ui" */,
+				447DB40129C12A54003E44B2 /* XCRemoteSwiftPackageReference "keychain-swift" */,
 			);
 			productRefGroup = 44DFCA5C29C0BBB200B026E7 /* Products */;
 			projectDirPath = "";
@@ -158,8 +200,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				447DB3F029C11734003E44B2 /* ChatbubbleShape.swift in Sources */,
 				44DFCA6129C0BBB200B026E7 /* ContentView.swift in Sources */,
+				447DB40529C12A7F003E44B2 /* TokenStore.swift in Sources */,
 				44DFCA7529C0BCA400B026E7 /* ChatBubble.swift in Sources */,
+				447DB3FB29C12541003E44B2 /* CodeThemeas.swift in Sources */,
+				447DB3FD29C12558003E44B2 /* Codehighloghter.swift in Sources */,
+				447DB40029C129FE003E44B2 /* Message.swift in Sources */,
+				44DFCA7729C0C06600B026E7 /* ChatViewModel.swift in Sources */,
 				44DFCA5F29C0BBB200B026E7 /* AskGPTApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -299,7 +347,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.1;
@@ -337,7 +385,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.1;
@@ -376,6 +424,22 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		447DB3F729C11E6A003E44B2 /* XCRemoteSwiftPackageReference "swift-markdown-ui" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/gonzalezreal/swift-markdown-ui";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		447DB40129C12A54003E44B2 /* XCRemoteSwiftPackageReference "keychain-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/evgenyneu/keychain-swift";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		44DFCA7029C0BC4A00B026E7 /* XCRemoteSwiftPackageReference "OpenAISwift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/adamrushy/OpenAISwift";
@@ -387,6 +451,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		447DB3F829C11E6A003E44B2 /* MarkdownUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 447DB3F729C11E6A003E44B2 /* XCRemoteSwiftPackageReference "swift-markdown-ui" */;
+			productName = MarkdownUI;
+		};
+		447DB40229C12A54003E44B2 /* KeychainSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 447DB40129C12A54003E44B2 /* XCRemoteSwiftPackageReference "keychain-swift" */;
+			productName = KeychainSwift;
+		};
 		44DFCA7129C0BC4A00B026E7 /* OpenAISwift */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 44DFCA7029C0BC4A00B026E7 /* XCRemoteSwiftPackageReference "OpenAISwift" */;

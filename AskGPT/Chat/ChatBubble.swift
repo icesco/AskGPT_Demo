@@ -6,17 +6,21 @@
 //
 
 import SwiftUI
+import MarkdownUI
 
 struct ChatBubble: View {
     
     let isSender: Bool
     let text: String
-    
+  
     var body: some View {
-        Text(text)
-            .foregroundColor(isSender ? .white : .primary)
-            .padding()
-            .background(RoundedRectangle(cornerRadius: 12.5, style: .continuous).fill(isSender ? Color.accentColor : Color.gray))
+        Markdown(text)
+            .markdownTextStyle(textStyle: {
+                ForegroundColor(isSender ? .white : .primary)
+            })
+            .markdownCodeSyntaxHighlighter(MyCodeHighlighter())
+            .padding(12)
+            .background(ChatBubbleShape().fill(isSender ? Color.accentColor : Color(.secondarySystemFill)).rotation3DEffect(.radians( isSender ? 0 :.pi), axis: (0.0, 1.0, 0.0)))
             .frame(maxWidth: .infinity, alignment: isSender ? .trailing : .leading)
             .padding()
     }
@@ -25,13 +29,14 @@ struct ChatBubble: View {
 struct ChatBubble_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            ChatBubble(isSender: true, text: "Hello world!")
-            
+           
             ScrollView {
                 LazyVStack {
-                    ChatBubble(isSender: true, text: "Hello world!")
-                    ChatBubble(isSender: false, text: "Hello world!")
-                    ChatBubble(isSender: true, text: "Hello world!")
+                    ChatBubble(isSender: false, text: "Rose\n\n\nrosse\n\ncadono")
+                    ChatBubble(isSender: true, text: "Hello world\n\nI'm going a capo!")
+                    ChatBubble(isSender: false, text: "\n\nHello world!\n\nCiao ciao **bold text**")
+                    ChatBubble(isSender: true, text: "Hello world! *This is italics*")
+                    ChatBubble(isSender: false, text: "```swift\nstruct Time: Codable {\n\tvar item = \"Ciao\"\n}\n```")
                 }
             }
         }
