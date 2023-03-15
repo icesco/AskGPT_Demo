@@ -26,27 +26,19 @@ final class ChatViewModel: ObservableObject {
     
     private var chatTask: Task<Void, Never>?
     private var openAI: OpenAISwift
-    private let store = TokenStore()
     
-    @Published var isNotReadyToChat: Bool = true
     
     init() {
-        if let token = store.token() {
-            self.openAI = OpenAISwift(authToken: token)
-            self.isNotReadyToChat = false
-        } else {
-            self.openAI = OpenAISwift(authToken: "")
-            self.isNotReadyToChat = true
-        }
+        self.openAI = OpenAISwift(authToken: "")
     }
     
-    func login(_ token: String) {
-        guard store.setToken(token) else {
+    func login(_ token: String?) {
+        guard let token else {
+            self.openAI = OpenAISwift(authToken: "")
             return
         }
         
         self.openAI = OpenAISwift(authToken: token)
-        self.isNotReadyToChat = false
     }
     
     func clearChat() {

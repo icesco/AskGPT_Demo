@@ -7,15 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		440271F829C1B753009F9D36 /* AppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440271F729C1B753009F9D36 /* AppViewModel.swift */; };
+		440271FB29C1B8E2009F9D36 /* ChatCodeHighlighter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440271FA29C1B8E2009F9D36 /* ChatCodeHighlighter.swift */; };
+		440271FD29C1B90C009F9D36 /* Codehighlighter in Frameworks */ = {isa = PBXBuildFile; productRef = 440271FC29C1B90C009F9D36 /* Codehighlighter */; };
+		440271FF29C1BA40009F9D36 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440271FE29C1BA40009F9D36 /* SettingsView.swift */; };
 		447DB3F029C11734003E44B2 /* ChatbubbleShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447DB3EF29C11734003E44B2 /* ChatbubbleShape.swift */; };
 		447DB3F929C11E6A003E44B2 /* MarkdownUI in Frameworks */ = {isa = PBXBuildFile; productRef = 447DB3F829C11E6A003E44B2 /* MarkdownUI */; };
-		447DB3FB29C12541003E44B2 /* CodeThemeas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447DB3FA29C12541003E44B2 /* CodeThemeas.swift */; };
-		447DB3FD29C12558003E44B2 /* Codehighloghter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447DB3FC29C12558003E44B2 /* Codehighloghter.swift */; };
 		447DB40029C129FE003E44B2 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447DB3FF29C129FE003E44B2 /* Message.swift */; };
 		447DB40329C12A54003E44B2 /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 447DB40229C12A54003E44B2 /* KeychainSwift */; };
 		447DB40529C12A7F003E44B2 /* TokenStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447DB40429C12A7F003E44B2 /* TokenStore.swift */; };
 		44DFCA5F29C0BBB200B026E7 /* AskGPTApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DFCA5E29C0BBB200B026E7 /* AskGPTApp.swift */; };
-		44DFCA6129C0BBB200B026E7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DFCA6029C0BBB200B026E7 /* ContentView.swift */; };
+		44DFCA6129C0BBB200B026E7 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DFCA6029C0BBB200B026E7 /* ChatView.swift */; };
 		44DFCA6329C0BBB300B026E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44DFCA6229C0BBB300B026E7 /* Assets.xcassets */; };
 		44DFCA6729C0BBB300B026E7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44DFCA6629C0BBB300B026E7 /* Preview Assets.xcassets */; };
 		44DFCA7229C0BC4A00B026E7 /* OpenAISwift in Frameworks */ = {isa = PBXBuildFile; productRef = 44DFCA7129C0BC4A00B026E7 /* OpenAISwift */; };
@@ -24,14 +26,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		440271F729C1B753009F9D36 /* AppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewModel.swift; sourceTree = "<group>"; };
+		440271F929C1B8BA009F9D36 /* Codehighlighter */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Codehighlighter; sourceTree = "<group>"; };
+		440271FA29C1B8E2009F9D36 /* ChatCodeHighlighter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatCodeHighlighter.swift; sourceTree = "<group>"; };
+		440271FE29C1BA40009F9D36 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		447DB3EF29C11734003E44B2 /* ChatbubbleShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatbubbleShape.swift; sourceTree = "<group>"; };
-		447DB3FA29C12541003E44B2 /* CodeThemeas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeThemeas.swift; sourceTree = "<group>"; };
-		447DB3FC29C12558003E44B2 /* Codehighloghter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Codehighloghter.swift; sourceTree = "<group>"; };
 		447DB3FF29C129FE003E44B2 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		447DB40429C12A7F003E44B2 /* TokenStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenStore.swift; sourceTree = "<group>"; };
 		44DFCA5B29C0BBB200B026E7 /* AskGPT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AskGPT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44DFCA5E29C0BBB200B026E7 /* AskGPTApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AskGPTApp.swift; sourceTree = "<group>"; };
-		44DFCA6029C0BBB200B026E7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		44DFCA6029C0BBB200B026E7 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 		44DFCA6229C0BBB300B026E7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		44DFCA6429C0BBB300B026E7 /* AskGPT.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AskGPT.entitlements; sourceTree = "<group>"; };
 		44DFCA6629C0BBB300B026E7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -45,6 +49,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				447DB40329C12A54003E44B2 /* KeychainSwift in Frameworks */,
+				440271FD29C1B90C009F9D36 /* Codehighlighter in Frameworks */,
 				44DFCA7229C0BC4A00B026E7 /* OpenAISwift in Frameworks */,
 				447DB3F929C11E6A003E44B2 /* MarkdownUI in Frameworks */,
 			);
@@ -71,6 +76,7 @@
 		44DFCA5229C0BBB200B026E7 = {
 			isa = PBXGroup;
 			children = (
+				440271F929C1B8BA009F9D36 /* Codehighlighter */,
 				44DFCA5D29C0BBB200B026E7 /* AskGPT */,
 				44DFCA5C29C0BBB200B026E7 /* Products */,
 				447DB3F129C1187F003E44B2 /* Frameworks */,
@@ -89,7 +95,9 @@
 			isa = PBXGroup;
 			children = (
 				44DFCA5E29C0BBB200B026E7 /* AskGPTApp.swift */,
-				44DFCA6029C0BBB200B026E7 /* ContentView.swift */,
+				440271F729C1B753009F9D36 /* AppViewModel.swift */,
+				44DFCA6029C0BBB200B026E7 /* ChatView.swift */,
+				440271FE29C1BA40009F9D36 /* SettingsView.swift */,
 				447DB3FE29C129F1003E44B2 /* Model */,
 				44DFCA7629C0C06600B026E7 /* ChatViewModel.swift */,
 				447DB40429C12A7F003E44B2 /* TokenStore.swift */,
@@ -113,9 +121,8 @@
 			isa = PBXGroup;
 			children = (
 				44DFCA7429C0BCA400B026E7 /* ChatBubble.swift */,
-				447DB3FA29C12541003E44B2 /* CodeThemeas.swift */,
+				440271FA29C1B8E2009F9D36 /* ChatCodeHighlighter.swift */,
 				447DB3EF29C11734003E44B2 /* ChatbubbleShape.swift */,
-				447DB3FC29C12558003E44B2 /* Codehighloghter.swift */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
@@ -140,6 +147,7 @@
 				44DFCA7129C0BC4A00B026E7 /* OpenAISwift */,
 				447DB3F829C11E6A003E44B2 /* MarkdownUI */,
 				447DB40229C12A54003E44B2 /* KeychainSwift */,
+				440271FC29C1B90C009F9D36 /* Codehighlighter */,
 			);
 			productName = AskGPT;
 			productReference = 44DFCA5B29C0BBB200B026E7 /* AskGPT.app */;
@@ -200,12 +208,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				440271F829C1B753009F9D36 /* AppViewModel.swift in Sources */,
 				447DB3F029C11734003E44B2 /* ChatbubbleShape.swift in Sources */,
-				44DFCA6129C0BBB200B026E7 /* ContentView.swift in Sources */,
+				44DFCA6129C0BBB200B026E7 /* ChatView.swift in Sources */,
 				447DB40529C12A7F003E44B2 /* TokenStore.swift in Sources */,
+				440271FB29C1B8E2009F9D36 /* ChatCodeHighlighter.swift in Sources */,
+				440271FF29C1BA40009F9D36 /* SettingsView.swift in Sources */,
 				44DFCA7529C0BCA400B026E7 /* ChatBubble.swift in Sources */,
-				447DB3FB29C12541003E44B2 /* CodeThemeas.swift in Sources */,
-				447DB3FD29C12558003E44B2 /* Codehighloghter.swift in Sources */,
 				447DB40029C129FE003E44B2 /* Message.swift in Sources */,
 				44DFCA7729C0C06600B026E7 /* ChatViewModel.swift in Sources */,
 				44DFCA5F29C0BBB200B026E7 /* AskGPTApp.swift in Sources */,
@@ -451,6 +460,10 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		440271FC29C1B90C009F9D36 /* Codehighlighter */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Codehighlighter;
+		};
 		447DB3F829C11E6A003E44B2 /* MarkdownUI */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 447DB3F729C11E6A003E44B2 /* XCRemoteSwiftPackageReference "swift-markdown-ui" */;

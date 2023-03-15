@@ -18,9 +18,9 @@ struct ChatBubble: View {
             .markdownTextStyle(textStyle: {
                 ForegroundColor(isSender ? .white : .primary)
             })
-            .markdownCodeSyntaxHighlighter(MyCodeHighlighter())
+            .markdownCodeSyntaxHighlighter(ChatCodeHighlighter())
             .padding(12)
-            .background(ChatBubbleShape().fill(isSender ? Color.accentColor : Color(.secondarySystemFill)).rotation3DEffect(.radians( isSender ? 0 :.pi), axis: (0.0, 1.0, 0.0)))
+            .background(ChatBubbleShape().fill(isSender ? Color.accentColor.gradient : Color(.secondarySystemFill).gradient).rotation3DEffect(.radians( isSender ? 0 : .pi), axis: (0.0, 1.0, 0.0)))
             .frame(maxWidth: .infinity, alignment: isSender ? .trailing : .leading)
             .padding()
     }

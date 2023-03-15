@@ -7,16 +7,6 @@
 
 import Foundation
 import UIKit
-import MarkdownUI
-import SwiftUI
-
-struct MyCodeHighlighter: CodeSyntaxHighlighter {
-    
-    func highlightCode(_ code: String, language: String?) -> Text {
-        let code = NSMutableAttributedString.parseCode(text: code, fontSize: 15, using: XCodeTheme())
-        return Text(AttributedString(code))
-    }
-}
 
 extension NSMutableAttributedString {
     
