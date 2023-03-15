@@ -13,5 +13,6 @@ struct Message: Identifiable, Hashable {
     let isSender: Bool
     let id: UUID = .init()
     var isError: Bool = false
+    let date: Date = .now
     
 }

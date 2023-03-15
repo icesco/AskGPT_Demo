@@ -24,12 +24,13 @@ struct ChatView: View {
                                 .foregroundColor(.secondary)
                                 .font(.caption)
                         } else {
-                            ChatBubble(isSender: message.isSender, text: message.text).id(message.id)
+                            ChatBubble(isSender: message.isSender, date: message.date, text: message.text).id(message.id)
                         }
                         
                     }
                 }
             }
+            .scrollDismissesKeyboard(.interactively)
             .onChange(of: viewModel.lastMessage) { message in
                 guard let message else {
                     return
@@ -44,7 +45,7 @@ struct ChatView: View {
             
             VStack {
                 if viewModel.isResponding {
-                    ChatBubble(isSender: false, text: "Responding..").redacted(reason: .placeholder)
+                    ChatBubble(isSender: false, date: .now, text: "Responding..").redacted(reason: .placeholder)
                         .transition(.move(edge: .bottom))
                 }
                 
