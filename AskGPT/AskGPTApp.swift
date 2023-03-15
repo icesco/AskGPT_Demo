@@ -16,7 +16,7 @@ struct AskGPTApp: App {
         WindowGroup {
             TabView {
                 NavigationStack {
-                    ChatView()
+                    ConversationView()
                         .environmentObject(appViewModel)
                         .environmentObject(appViewModel.chatViewModel)
                 }

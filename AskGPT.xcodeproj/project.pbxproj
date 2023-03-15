@@ -11,7 +11,9 @@
 		440271FB29C1B8E2009F9D36 /* ChatCodeHighlighter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440271FA29C1B8E2009F9D36 /* ChatCodeHighlighter.swift */; };
 		440271FD29C1B90C009F9D36 /* Codehighlighter in Frameworks */ = {isa = PBXBuildFile; productRef = 440271FC29C1B90C009F9D36 /* Codehighlighter */; };
 		440271FF29C1BA40009F9D36 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440271FE29C1BA40009F9D36 /* SettingsView.swift */; };
-		447DB3F029C11734003E44B2 /* ChatbubbleShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447DB3EF29C11734003E44B2 /* ChatbubbleShape.swift */; };
+		4402720229C1E871009F9D36 /* ChatKit in Frameworks */ = {isa = PBXBuildFile; productRef = 4402720129C1E871009F9D36 /* ChatKit */; };
+		4402720429C205F4009F9D36 /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4402720329C205F4009F9D36 /* ChatViewModel.swift */; };
+		4402720629C20F4D009F9D36 /* ChatTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4402720529C20F4D009F9D36 /* ChatTextFieldView.swift */; };
 		447DB3F929C11E6A003E44B2 /* MarkdownUI in Frameworks */ = {isa = PBXBuildFile; productRef = 447DB3F829C11E6A003E44B2 /* MarkdownUI */; };
 		447DB40029C129FE003E44B2 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447DB3FF29C129FE003E44B2 /* Message.swift */; };
 		447DB40329C12A54003E44B2 /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 447DB40229C12A54003E44B2 /* KeychainSwift */; };
@@ -22,7 +24,7 @@
 		44DFCA6729C0BBB300B026E7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44DFCA6629C0BBB300B026E7 /* Preview Assets.xcassets */; };
 		44DFCA7229C0BC4A00B026E7 /* OpenAISwift in Frameworks */ = {isa = PBXBuildFile; productRef = 44DFCA7129C0BC4A00B026E7 /* OpenAISwift */; };
 		44DFCA7529C0BCA400B026E7 /* ChatBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DFCA7429C0BCA400B026E7 /* ChatBubble.swift */; };
-		44DFCA7729C0C06600B026E7 /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DFCA7629C0C06600B026E7 /* ChatViewModel.swift */; };
+		44DFCA7729C0C06600B026E7 /* Message + OpenAI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DFCA7629C0C06600B026E7 /* Message + OpenAI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,7 +32,10 @@
 		440271F929C1B8BA009F9D36 /* Codehighlighter */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Codehighlighter; sourceTree = "<group>"; };
 		440271FA29C1B8E2009F9D36 /* ChatCodeHighlighter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatCodeHighlighter.swift; sourceTree = "<group>"; };
 		440271FE29C1BA40009F9D36 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
-		447DB3EF29C11734003E44B2 /* ChatbubbleShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatbubbleShape.swift; sourceTree = "<group>"; };
+		4402720029C1E3E0009F9D36 /* ChatKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = ChatKit; sourceTree = "<group>"; };
+		4402720329C205F4009F9D36 /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
+		4402720529C20F4D009F9D36 /* ChatTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTextFieldView.swift; sourceTree = "<group>"; };
+		4402720729C21281009F9D36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		447DB3FF29C129FE003E44B2 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		447DB40429C12A7F003E44B2 /* TokenStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenStore.swift; sourceTree = "<group>"; };
 		44DFCA5B29C0BBB200B026E7 /* AskGPT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AskGPT.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -40,7 +45,7 @@
 		44DFCA6429C0BBB300B026E7 /* AskGPT.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AskGPT.entitlements; sourceTree = "<group>"; };
 		44DFCA6629C0BBB300B026E7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		44DFCA7429C0BCA400B026E7 /* ChatBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBubble.swift; sourceTree = "<group>"; };
-		44DFCA7629C0C06600B026E7 /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
+		44DFCA7629C0C06600B026E7 /* Message + OpenAI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Message + OpenAI.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +56,7 @@
 				447DB40329C12A54003E44B2 /* KeychainSwift in Frameworks */,
 				440271FD29C1B90C009F9D36 /* Codehighlighter in Frameworks */,
 				44DFCA7229C0BC4A00B026E7 /* OpenAISwift in Frameworks */,
+				4402720229C1E871009F9D36 /* ChatKit in Frameworks */,
 				447DB3F929C11E6A003E44B2 /* MarkdownUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -76,6 +82,7 @@
 		44DFCA5229C0BBB200B026E7 = {
 			isa = PBXGroup;
 			children = (
+				4402720029C1E3E0009F9D36 /* ChatKit */,
 				440271F929C1B8BA009F9D36 /* Codehighlighter */,
 				44DFCA5D29C0BBB200B026E7 /* AskGPT */,
 				44DFCA5C29C0BBB200B026E7 /* Products */,
@@ -94,12 +101,15 @@
 		44DFCA5D29C0BBB200B026E7 /* AskGPT */ = {
 			isa = PBXGroup;
 			children = (
+				4402720729C21281009F9D36 /* Info.plist */,
 				44DFCA5E29C0BBB200B026E7 /* AskGPTApp.swift */,
 				440271F729C1B753009F9D36 /* AppViewModel.swift */,
 				44DFCA6029C0BBB200B026E7 /* ChatView.swift */,
+				4402720529C20F4D009F9D36 /* ChatTextFieldView.swift */,
+				4402720329C205F4009F9D36 /* ChatViewModel.swift */,
 				440271FE29C1BA40009F9D36 /* SettingsView.swift */,
 				447DB3FE29C129F1003E44B2 /* Model */,
-				44DFCA7629C0C06600B026E7 /* ChatViewModel.swift */,
+				44DFCA7629C0C06600B026E7 /* Message + OpenAI.swift */,
 				447DB40429C12A7F003E44B2 /* TokenStore.swift */,
 				44DFCA7329C0BC9600B026E7 /* Chat */,
 				44DFCA6229C0BBB300B026E7 /* Assets.xcassets */,
@@ -122,7 +132,6 @@
 			children = (
 				44DFCA7429C0BCA400B026E7 /* ChatBubble.swift */,
 				440271FA29C1B8E2009F9D36 /* ChatCodeHighlighter.swift */,
-				447DB3EF29C11734003E44B2 /* ChatbubbleShape.swift */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
@@ -148,6 +157,7 @@
 				447DB3F829C11E6A003E44B2 /* MarkdownUI */,
 				447DB40229C12A54003E44B2 /* KeychainSwift */,
 				440271FC29C1B90C009F9D36 /* Codehighlighter */,
+				4402720129C1E871009F9D36 /* ChatKit */,
 			);
 			productName = AskGPT;
 			productReference = 44DFCA5B29C0BBB200B026E7 /* AskGPT.app */;
@@ -209,14 +219,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				440271F829C1B753009F9D36 /* AppViewModel.swift in Sources */,
-				447DB3F029C11734003E44B2 /* ChatbubbleShape.swift in Sources */,
 				44DFCA6129C0BBB200B026E7 /* ChatView.swift in Sources */,
+				4402720629C20F4D009F9D36 /* ChatTextFieldView.swift in Sources */,
 				447DB40529C12A7F003E44B2 /* TokenStore.swift in Sources */,
 				440271FB29C1B8E2009F9D36 /* ChatCodeHighlighter.swift in Sources */,
 				440271FF29C1BA40009F9D36 /* SettingsView.swift in Sources */,
+				4402720429C205F4009F9D36 /* ChatViewModel.swift in Sources */,
 				44DFCA7529C0BCA400B026E7 /* ChatBubble.swift in Sources */,
 				447DB40029C129FE003E44B2 /* Message.swift in Sources */,
-				44DFCA7729C0C06600B026E7 /* ChatViewModel.swift in Sources */,
+				44DFCA7729C0C06600B026E7 /* Message + OpenAI.swift in Sources */,
 				44DFCA5F29C0BBB200B026E7 /* AskGPTApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -346,6 +357,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AskGPT/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Geene;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
@@ -385,6 +397,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AskGPT/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Geene;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
@@ -465,6 +478,10 @@
 		440271FC29C1B90C009F9D36 /* Codehighlighter */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Codehighlighter;
+		};
+		4402720129C1E871009F9D36 /* ChatKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ChatKit;
 		};
 		447DB3F829C11E6A003E44B2 /* MarkdownUI */ = {
 			isa = XCSwiftPackageProductDependency;

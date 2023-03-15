@@ -6,104 +6,36 @@
 //
 
 import SwiftUI
+import ChatKit
 
-struct ChatView: View {
+struct ConversationView: View {
     
-    @State private var typedText: String = ""
-    @EnvironmentObject private var viewModel: ChatViewModel
+    @EnvironmentObject private var viewModel: OpenAIChatViewModel
     @EnvironmentObject private var appViewModel: AppViewModel
     
     var body: some View {
-        ScrollViewReader { proxy in
-            ScrollView {
-                LazyVStack(spacing: 0) {
-                    ForEach(viewModel.messages) { message in
-                        if message.isError {
-                            Text("Error.. Try another query.")
-                                .id(message.id)
-                                .foregroundColor(.secondary)
-                                .font(.caption)
-                        } else {
-                            ChatBubble(isSender: message.isSender, date: message.date, text: message.text).id(message.id)
-                        }
-                        
-                    }
-                }
-            }
-            .scrollDismissesKeyboard(.interactively)
-            .onChange(of: viewModel.lastMessage) { message in
-                guard let message else {
-                    return
-                }
-                
-                withAnimation {
-                    proxy.scrollTo(message.id, anchor: .bottom)
-                }
+        ChatView(viewModel: viewModel) { message in
+            if message.isError {
+                Text("Error.. Try another query.")
+                    .id(message.id)
+                    .foregroundColor(.secondary)
+                    .font(.caption)
+            } else {
+                ChatMessageContent(isSender: message.isSender,
+                                   date: message.date,
+                                   text: message.text)
+                .inChatBubble(isSender: message.isSender)
+                .padding(.horizontal, 6)
             }
         }
         .safeAreaInset(edge: .bottom) {
-            
-            VStack {
-                if viewModel.isResponding {
-                    ChatBubble(isSender: false, date: .now, text: "Responding..").redacted(reason: .placeholder)
-                        .transition(.move(edge: .bottom))
-                }
-                
-                HStack {
-                    TextField("Chat with me..", text: $typedText, axis: .vertical)
-                        .lineLimit(5, reservesSpace: false)
-                        .padding()
-                        .background(Color(.systemFill), in: Capsule())
-                    
-                    Button {
-                        viewModel.sendNewMessage(typedText)
-                        typedText = ""
-                    } label: {
-                        Image(systemName:  viewModel.isResponding ? "arrow.up.circle" : "arrow.up.circle.fill")
-                            .resizable()
-                            .frame(width: 45, height: 45)
-                    }
-                }
-                .padding(.horizontal)
-                .padding(.vertical, 4)
-                .background(.regularMaterial)
-            }
-            .disabled(viewModel.isResponding || appViewModel.isNotReadyToChat)
-        }.onSubmit {
-            guard !viewModel.isResponding && !appViewModel.isNotReadyToChat else {
-                return
-            }
-            viewModel.sendNewMessage(typedText)
-            typedText = ""
+            ChatTextFieldView()
         }
-        .toolbar {
-            ToolbarItem(placement: .navigationBarTrailing) {
-                Button {
-                    viewModel.addRandomMessage()
-                } label: {
-                    Label("New", systemImage: "plus.circle.fill")
-                        .symbolRenderingMode(.hierarchical)
-                        .foregroundColor(Color.accentColor)
-                }
-                
-            }
-        }.navigationBarTitleDisplayMode(.inline)
-            .navigationTitle(Text("AskGPT"))
-            .animation(.easeOut, value: viewModel.isResponding)
-            .toolbarTitleMenu {
-                Button {
-                    viewModel.clearChat()
-                    appViewModel.newAccent()
-                } label: {
-                    Text("New Chat")
-                }
-            }
+        .navigationBarTitleDisplayMode(.inline)
+        .navigationTitle(Text("Chat"))
+//        .toolbarTitleMenu {
+//
+//        }
         
-    }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ChatView()
     }
 }

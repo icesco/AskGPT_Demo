@@ -1,93 +1,63 @@
 //
-//  ChatViewModel.swift
+//  ChatViewModell.swift
 //  AskGPT
 //
-//  Created by Francesco Bianco on 14/03/23.
+//  Created by Francesco Bianco on 15/03/23.
 //
 
 import Foundation
+import ChatKit
 import OpenAISwift
 
-extension Message {
-    
-    var toChatMessage: ChatMessage {
-        return ChatMessage(role: isSender ? .user : .assistant, content: self.text)
-    }
-    
-}
-
-final class ChatViewModel: ObservableObject {
-    
-    @Published var messages: [Message] = []
-    
-    @Published var isResponding: Bool = false
-    
-    @Published var lastMessage: Message?
+final class OpenAIChatViewModel: AnyChatViewModel<Message> {
     
     private var chatTask: Task<Void, Never>?
-    private var openAI: OpenAISwift
+    private(set) var openAI: OpenAISwift
     
-    
-    init() {
-        self.openAI = OpenAISwift(authToken: "")
+    init(openAI: OpenAISwift) {
+        self.openAI = openAI
+        super.init(messages: [])
+        self.openAI = openAI
+    }
+             
+    func setOpenAI(_ opeAI: OpenAISwift) {
+        self.openAI = opeAI
     }
     
-    func login(_ token: String?) {
-        guard let token else {
-            self.openAI = OpenAISwift(authToken: "")
-            return
-        }
-        
-        self.openAI = OpenAISwift(authToken: token)
-    }
-    
-    func clearChat() {
-        self.messages = []
-        self.lastMessage = nil
-    }
-    
-    @MainActor
-    func sendNewMessage(_ text: String) {
-        let message = Message(text: text, isSender: true)
-        messages.append(message)
-        lastMessage = message
-        queryAI(text)
-    }
-    
-    @MainActor
-    func queryAI(_ prompt: String) {
-        isResponding = true
+    func sendMessageSync(with text: String) {
         chatTask = Task { [weak self] in
             
             defer { self?.chatTask = nil }
             
-            guard let self else {
-                return
-            }
-            
-            do {
-                
-                let result = try await openAI.sendChat(with: messages.compactMap { $0.toChatMessage })
-                print(result.choices.compactMap { $0.message.content }.joined(separator: "!!!"))
-                let newMessages: [Message] = result.choices.compactMap { result in
-                    return Message(text: result.message.content, isSender: false)
-                }
-                
-                self.messages.append(contentsOf: newMessages)
-                self.isResponding = false
-                self.lastMessage = newMessages.last
-            } catch {
-                print("Something went wrong")
-                self.isResponding = false
-                self.messages.append(Message(text: "Error: \(error)", isSender: false, isError: true))
-            }
+            await sendMessage(with: text)
         }
     }
     
-    func addRandomMessage() {
-        let newMessage = Message(text: "Hello hello", isSender: .random())
-        messages.append(newMessage)
-        lastMessage = newMessage
+    override func sendMessage(with text: String) async {
+        let message = Message(text: text, isSender: true)
+        await self.appendMessage(message)
+        await self.updateLastMessage(message)
+        await queryAI(text)
     }
     
+    @MainActor
+    func queryAI(_ prompt: String) async {
+        self.toggleReplying(true)
+        do {
+            
+            let result = try await openAI.sendChat(with: self.getMessages().compactMap { $0.toChatMessage })
+            print(result.choices.compactMap { $0.message.content }.joined(separator: "!!!"))
+            let newMessages: [Message] = result.choices.compactMap { result in
+                return Message(text: result.message.content, isSender: false)
+            }
+            
+            self.appendMessages(newMessages)
+            self.toggleReplying(false)
+            self.updateLastMessage(newMessages.last)
+        } catch {
+            print("Something went wrong")
+            self.toggleReplying(false)
+            self.appendMessage(Message(text: "Error: \(error)", isSender: false, isError: true))
+        }
+    }
 }

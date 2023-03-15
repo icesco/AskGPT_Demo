@@ -7,32 +7,27 @@
 
 import Foundation
 import SwiftUI
+import OpenAISwift
 
 final class AppViewModel: ObservableObject {
     
     @Published private(set) var appTint: Color = .accentColor
     @Published private(set) var isNotReadyToChat: Bool = true
     
-    var chatViewModel: ChatViewModel = .init()
+    let chatViewModel: OpenAIChatViewModel
+    private var openAI: OpenAISwift = .init(authToken: "")
     private let store = TokenStore()
-    
-    private let colors: [Color] = [
-        .red,
-        .orange,
-        .blue,
-        .green,
-        .indigo,
-        .purple,
-        .pink
-    ]
     
     init() {
         if let token = store.token() {
             self.isNotReadyToChat = false
-            chatViewModel.login(token)
+            let open = OpenAISwift(authToken: token)
+            self.openAI = open
+            self.chatViewModel = .init(openAI: open)
         } else {
+            self.openAI = OpenAISwift(authToken: "")
+            self.chatViewModel = .init(openAI: OpenAISwift(authToken: ""))
             self.isNotReadyToChat = true
-            chatViewModel.login(nil)
         }
     }
     
@@ -40,7 +35,8 @@ final class AppViewModel: ObservableObject {
         guard store.setToken(token) else {
             return
         }
-        chatViewModel.login(token)
+        self.openAI = OpenAISwift(authToken: token)
+        chatViewModel.setOpenAI(openAI)
         self.isNotReadyToChat = false
     }
     
@@ -49,9 +45,6 @@ final class AppViewModel: ObservableObject {
             return
         }
         self.isNotReadyToChat = true
-    }
-    
-    func newAccent() {
-        self.appTint = colors.randomElement()!
+        self.openAI = OpenAISwift(authToken: "")
     }
 }
