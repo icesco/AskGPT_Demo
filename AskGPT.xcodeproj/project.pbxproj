@@ -23,7 +23,7 @@
 		44DFCA6329C0BBB300B026E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44DFCA6229C0BBB300B026E7 /* Assets.xcassets */; };
 		44DFCA6729C0BBB300B026E7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44DFCA6629C0BBB300B026E7 /* Preview Assets.xcassets */; };
 		44DFCA7229C0BC4A00B026E7 /* OpenAISwift in Frameworks */ = {isa = PBXBuildFile; productRef = 44DFCA7129C0BC4A00B026E7 /* OpenAISwift */; };
-		44DFCA7529C0BCA400B026E7 /* ChatBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DFCA7429C0BCA400B026E7 /* ChatBubble.swift */; };
+		44DFCA7529C0BCA400B026E7 /* ChatMessageContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DFCA7429C0BCA400B026E7 /* ChatMessageContent.swift */; };
 		44DFCA7729C0C06600B026E7 /* Message + OpenAI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DFCA7629C0C06600B026E7 /* Message + OpenAI.swift */; };
 /* End PBXBuildFile section */
 
@@ -44,7 +44,7 @@
 		44DFCA6229C0BBB300B026E7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		44DFCA6429C0BBB300B026E7 /* AskGPT.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AskGPT.entitlements; sourceTree = "<group>"; };
 		44DFCA6629C0BBB300B026E7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		44DFCA7429C0BCA400B026E7 /* ChatBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBubble.swift; sourceTree = "<group>"; };
+		44DFCA7429C0BCA400B026E7 /* ChatMessageContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessageContent.swift; sourceTree = "<group>"; };
 		44DFCA7629C0C06600B026E7 /* Message + OpenAI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Message + OpenAI.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -102,16 +102,13 @@
 			isa = PBXGroup;
 			children = (
 				4402720729C21281009F9D36 /* Info.plist */,
+				44DFCA7329C0BC9600B026E7 /* Chat */,
+				447DB3FE29C129F1003E44B2 /* Model */,
 				44DFCA5E29C0BBB200B026E7 /* AskGPTApp.swift */,
 				440271F729C1B753009F9D36 /* AppViewModel.swift */,
-				44DFCA6029C0BBB200B026E7 /* ChatView.swift */,
-				4402720529C20F4D009F9D36 /* ChatTextFieldView.swift */,
-				4402720329C205F4009F9D36 /* ChatViewModel.swift */,
 				440271FE29C1BA40009F9D36 /* SettingsView.swift */,
-				447DB3FE29C129F1003E44B2 /* Model */,
 				44DFCA7629C0C06600B026E7 /* Message + OpenAI.swift */,
 				447DB40429C12A7F003E44B2 /* TokenStore.swift */,
-				44DFCA7329C0BC9600B026E7 /* Chat */,
 				44DFCA6229C0BBB300B026E7 /* Assets.xcassets */,
 				44DFCA6429C0BBB300B026E7 /* AskGPT.entitlements */,
 				44DFCA6529C0BBB300B026E7 /* Preview Content */,
@@ -130,7 +127,10 @@
 		44DFCA7329C0BC9600B026E7 /* Chat */ = {
 			isa = PBXGroup;
 			children = (
-				44DFCA7429C0BCA400B026E7 /* ChatBubble.swift */,
+				44DFCA6029C0BBB200B026E7 /* ChatView.swift */,
+				4402720329C205F4009F9D36 /* ChatViewModel.swift */,
+				4402720529C20F4D009F9D36 /* ChatTextFieldView.swift */,
+				44DFCA7429C0BCA400B026E7 /* ChatMessageContent.swift */,
 				440271FA29C1B8E2009F9D36 /* ChatCodeHighlighter.swift */,
 			);
 			path = Chat;
@@ -225,7 +225,7 @@
 				440271FB29C1B8E2009F9D36 /* ChatCodeHighlighter.swift in Sources */,
 				440271FF29C1BA40009F9D36 /* SettingsView.swift in Sources */,
 				4402720429C205F4009F9D36 /* ChatViewModel.swift in Sources */,
-				44DFCA7529C0BCA400B026E7 /* ChatBubble.swift in Sources */,
+				44DFCA7529C0BCA400B026E7 /* ChatMessageContent.swift in Sources */,
 				447DB40029C129FE003E44B2 /* Message.swift in Sources */,
 				44DFCA7729C0C06600B026E7 /* Message + OpenAI.swift in Sources */,
 				44DFCA5F29C0BBB200B026E7 /* AskGPTApp.swift in Sources */,
